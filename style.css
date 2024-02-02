@@ -84,3 +84,8 @@ h1 {
     background: #fff;
     cursor: pointer;
 }
+
+.dots-container .dot.active {
+
+    background: #14788a;
+}
