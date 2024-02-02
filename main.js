@@ -61,6 +61,8 @@ setTimeout(() => {
         );
     }
 
+    changeCurrentSlide(currentSlide);
+
     nextBtn.addEventListener("click", () => {
 
         currentSlide++
@@ -88,12 +90,17 @@ setTimeout(() => {
         activeDot(currentSlide)
     })
 
-    dotsContainer.addEventListener("click", () => {
+    dotsContainer.addEventListener("click", (event) => {
 
+        console.log(event.target.classList, event.target.dataset);
 
+        if (event.target.classList.contains("dot")) {
 
-
-    })
+            const currentSlide = event.target.dataset.slide;
+            changeCurrentSlide(currentSlide)
+            activeDot(currentSlide)
+        }
+    });
 
 
 }, 1000)
