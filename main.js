@@ -5,7 +5,7 @@ const dotsContainer = document.querySelector(".dots-container");
 async function fetchListOfImages() {
 
     try {
-        const response = await fetch("https://picsum.photos/v2/list?page=1&limit=5", {
+        const response = await fetch("https://picsum.photos/v2/list?page=1&limit=10", {
             method: "GET"
         })
 
